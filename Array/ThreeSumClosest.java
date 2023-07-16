@@ -8,7 +8,6 @@ public class ThreeSumClosest {
         for(int i=0;i<l-2;i++){
             if(i>0 && nums[i]==nums[i-1])
                 continue;
-            int first = i;
             int left = i+1;
             int right = l-1;
             while(left<right){
