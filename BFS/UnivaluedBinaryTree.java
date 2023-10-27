@@ -6,13 +6,13 @@ public class UnivaluedBinaryTree {
             return true;
         }
 
-        if(root.left!=null && root.left.val == root.val){
-            return isUnivalTree(root.left);
+        if(root.left!=null && root.left.val != root.val){
+            return false;
         }
 
-        if(root.right!=null && root.right.val == root.val){
-            return isUnivalTree(root.right);
+        if(root.right!=null && root.right.val != root.val){
+            return false;
         }
-        return false;
+        return isUnivalTree(root.left) && isUnivalTree(root.right);
     }
 }
